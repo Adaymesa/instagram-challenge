@@ -975,3 +975,63 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.6ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/posts" for 127.0.0.1 at 2016-05-30 15:58:47 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 224ms (Views: 213.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/posts" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 2.2ms)
+Started POST "/posts" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f85eeacdb38 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-8177-1svb479.jpg>, @original_filename="aday.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"aday.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 923114\r\n">, "caption"=>"My first post"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/a12a7a99cb0dfd980a9ff6d138ac6e6120160530-8177-1m28y4s.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/a12a7a99cb0dfd980a9ff6d138ac6e6120160530-8177-1dwsbjr.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/a12a7a99cb0dfd980a9ff6d138ac6e6120160530-8177-1dwsbjr.jpg[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/a12a7a99cb0dfd980a9ff6d138ac6e6120160530-8177-1dwsbjr.jpg[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/91147e2b9b38213a1112fd88e3b58ab020160530-8177-1bhq810'
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/a12a7a99cb0dfd980a9ff6d138ac6e6120160530-8177-b77prh.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["image_file_name", "aday.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 923114], ["image_updated_at", "2016-05-30 14:58:48.063423"], ["caption", "My first post"], ["created_at", "2016-05-30 14:58:48.581886"], ["updated_at", "2016-05-30 14:58:48.581886"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts/5
+Completed 302 Found in 539ms (ActiveRecord: 1.3ms)
+Started GET "/posts/5" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/posts" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2016-05-30 15:58:48 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"caption"=>"Diagram"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK

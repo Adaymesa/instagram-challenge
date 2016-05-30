@@ -19,5 +19,12 @@ feature 'Posts' do
       expect(page).to have_content('My first post')
       expect(page).to have_css("img[src*='aday.jpg']")
     end
+    scenario 'Needs an image to create a post' do  
+      visit '/posts'
+      click_link 'Post to instagram'
+      fill_in 'Caption', with: "Diagram"
+      click_button 'Create Post'
+      expect(page).to have_content('You need an image to post here!')
+    end 
   end
 end
