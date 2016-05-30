@@ -27,4 +27,25 @@ feature 'Posts' do
       expect(page).to have_content('You need an image to post here!')
     end 
   end
+    context 'Editing post' do
+    scenario 'Let a user edit a post' do
+     visit '/posts'
+     create_post
+     click_link "Edit post"
+     fill_in 'Caption', with: 'Updated post'
+     click_button 'Update Post'
+     expect(page).to have_content 'Updated post'
+     expect(current_path).to eq '/posts'
+    end
+  end
+
+    context 'Deleting posts' do
+    scenario 'Removes a post when a user clicks a delete link' do
+      visit '/posts'
+      create_post
+      click_link "Delete post"
+      expect(page).not_to have_content 'My first post'
+      expect(page).to have_content 'Post deleted successfully'
+    end
+  end
 end
