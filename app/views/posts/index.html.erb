@@ -1,0 +1,11 @@
+	 <a href='posts/new'>Post to instagram</a>
+
+	 <% if @posts.any? %>
+	 <% @posts.each do |post| %>
+	 <h2> <%= post.caption %> </h2>
+	 <h2> <%= image_tag post.image.url(:medium) %> </h2>
+	 <% end %>
+	 <% else %>
+	 No posts added yet
+	 <a href='#'>Add a post</a>
+	 <% end %>

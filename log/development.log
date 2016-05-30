@@ -465,3 +465,690 @@ Started GET "/pictures" for ::1 at 2016-05-30 09:59:35 +0100
 Processing by PicturesController#index as HTML
   Rendered pictures/index.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures" for ::1 at 2016-05-30 10:29:10 +0100
+Processing by PicturesController#index as HTML
+  Rendered pictures/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 240ms (Views: 232.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pictures.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/pictures.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 10:29:10 +0100
+
+
+Started GET "/pictures" for ::1 at 2016-05-30 10:29:15 +0100
+Processing by PicturesController#index as HTML
+  Rendered pictures/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20160530094658)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160530094658"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentImageToRestaurants (20160530094810)
+  [1m[35m (5.4ms)[0m  BEGIN
+  [1m[36m (11.3ms)[0m  [1mALTER TABLE "restaurants" ADD "image_file_name" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToRestaurants (20160530094810)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "restaurants" ADD "image_file_name" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20160530094658)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160530094658"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentImageToRestaurants (20160530094810)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "restaurants" ADD "image_file_name" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPosts (20160530094840)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mALTER TABLE "posts" ADD "image_file_name" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" ADD "image_content_type" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" ADD "image_updated_at" timestamp
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160530094840"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/pictures" for ::1 at 2016-05-30 14:10:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/pictures"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.6ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.9ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.1ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (138.7ms)
+
+
+Started GET "/post" for ::1 at 2016-05-30 14:10:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/post"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Adaymesa/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.5ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.7ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.9ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:10:36 +0100
+Processing by PostsController#index as HTML
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 414ms (Views: 409.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 14:10:36 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 14:10:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:46:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 310ms (Views: 296.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 14:46:24 +0100
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 14:46:26 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 47ms (Views: 40.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/posts" for ::1 at 2016-05-30 14:48:22 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcmM6qItMyhqHDLX8xJaZi1FnAU7Q2/HFg83lQP08KyKUiXGmTQJSoCEHQNllEVsbZxt8ulRUk8/2mJJxu9pUw==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f89cd6a1b58 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-6774-kcgbbh.jpg>, @original_filename="IMG_9444 2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"IMG_9444 2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>#<ActionDispatch::Http::UploadedFile:0x007f89cd6a1b08 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-6774-grelol.JPG>, @original_filename="IMG_9482.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[caption]\"; filename=\"IMG_9482.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/9fc2146534c14401009c428a2f2b115820160530-6774-n55yp8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6774-5co0sb.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6774-5co0sb.jpg[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6774-5co0sb.jpg[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/06dbea1293f3c320035a046d56e3b42120160530-6774-jat13u'
+Completed 500 Internal Server Error in 583ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'caption' for Post.):
+  app/controllers/posts_controller.rb:11:in `create'
+
+
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.2ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.5ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Adaymesa/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCaptionToPosts (20160530135241)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "posts" ADD "caption" text[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160530135241"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:55:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 269ms (Views: 256.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 14:55:55 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 55ms (Views: 47.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/posts" for ::1 at 2016-05-30 14:56:22 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KfbAkLEnqZ5fFQGhzGLBQ+0h658BEN2Bysn8Zj8MYinibWm8ij6T/LWNLnVa5N5JrfgaaNMC4AnjHKm6+hf71g==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdb1202ba80 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-6934-1vjby7i.jpg>, @original_filename="IMG_9444 2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"IMG_9444 2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"me"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/9fc2146534c14401009c428a2f2b115820160530-6934-10vamhd.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6934-p4u9l8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6934-p4u9l8.jpg[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/469ccdac5c1119feef20627a8912546f20160530-6934-p4u9l8.jpg[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/09c75c9ea88a85d9106805b4a7652a0120160530-6934-lby17l'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/9fc2146534c14401009c428a2f2b115820160530-6934-u1byow.jpg'
+  [1m[35mSQL (18.5ms)[0m  INSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["image_file_name", "IMG_9444_2.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 923114], ["image_updated_at", "2016-05-30 13:56:22.078525"], ["caption", "me"], ["created_at", "2016-05-30 13:56:22.638170"], ["updated_at", "2016-05-30 13:56:22.638170"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 620ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:56:22 +0100
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 14:56:28 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 14:56:40 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-05-30 14:57:15 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqjapqAyNskjYU4joI0qfUjMweT3H6metOFYD0N+Pr7NM3OKmysMq8n5Yfc2CzV3CBUwEyUNlBadNA3ThmWnQQ==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdb16c525d0 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-6934-1b2vkyk.png>, @original_filename="Screen Shot 2016-05-23 at 15.28.21.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Screen Shot 2016-05-23 at 15.28.21.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"diagram"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/838baa0521a46a0780288936bb01b2a220160530-6934-bb2t2j.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-6934-1gq8b2p.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-6934-1gq8b2p.png[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-6934-1gq8b2p.png[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c507f21269770f5774c76232c4936be020160530-6934-1uszxjn'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/838baa0521a46a0780288936bb01b2a220160530-6934-y3myg2.png'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image_file_name", "Screen_Shot_2016-05-23_at_15.28.21.png"], ["image_content_type", "image/png"], ["image_file_size", 103969], ["image_updated_at", "2016-05-30 13:57:15.059694"], ["caption", "diagram"], ["created_at", "2016-05-30 13:57:15.245885"], ["updated_at", "2016-05-30 13:57:15.245885"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 213ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:57:15 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 14:57:18 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 14:57:18 +0100
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:15:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 294ms (Views: 276.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 15:15:10 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-05-30 15:15:28 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"83ozrgd1PckkaAW36LM7vy3mZNIJP3Y1Fb8MLSAkh4ZzduwFkl1z5CdfBG4mF6UTEsZuhesF5F/qchydXVmL9w==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdc928ac4f8 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-7513-cy7jvw.png>, @original_filename="Screen Shot 2016-05-23 at 15.28.21.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Screen Shot 2016-05-23 at 15.28.21.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"diagram"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/838baa0521a46a0780288936bb01b2a220160530-7513-1688tox.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-7513-1dx1ipv.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-7513-1dx1ipv.png[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/c78dcf340d8a2b43b259cb0be801fac620160530-7513-1dx1ipv.png[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/fbbd0baf926371117fd340b7adfcdf0a20160530-7513-1qhf8ym'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/838baa0521a46a0780288936bb01b2a220160530-7513-1hyssyi.png'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image_file_name", "Screen_Shot_2016-05-23_at_15.28.21.png"], ["image_content_type", "image/png"], ["image_file_size", 103969], ["image_updated_at", "2016-05-30 14:15:28.691352"], ["caption", "diagram"], ["created_at", "2016-05-30 14:15:28.895710"], ["updated_at", "2016-05-30 14:15:28.895710"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 235ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:15:28 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:16:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 260ms (Views: 245.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 15:16:21 +0100
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 15:16:24 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 15:16:37 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 15:16:37 +0100
+
+
+Started POST "/posts" for ::1 at 2016-05-30 15:16:50 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J2XAbKhSZb9VYmqOEQ1Daay+8zSMDofZwvU7C2RaszGnaR/HPXorklZVa1ffqd3Fk575Y240FbM9OCu7GSe/QA==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fec19ca85e8 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-7548-grv1j6.png>, @original_filename="Screen Shot 2016-05-23 at 15.23.24.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Screen Shot 2016-05-23 at 15.23.24.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"dia"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/b96298347aaceca65c35052ce379493f20160530-7548-c6g0b0.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/5e7459e8a77ddc287669f2119bba3c8720160530-7548-1orbez6.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/5e7459e8a77ddc287669f2119bba3c8720160530-7548-1orbez6.png[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/5e7459e8a77ddc287669f2119bba3c8720160530-7548-1orbez6.png[0]' -auto-orient -resize "300x300" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/35f7910df1ab10d0800d5e85d4b74a3e20160530-7548-t5w377'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/b96298347aaceca65c35052ce379493f20160530-7548-1uaqd00.png'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image_file_name", "Screen_Shot_2016-05-23_at_15.23.24.png"], ["image_content_type", "image/png"], ["image_file_size", 120378], ["image_updated_at", "2016-05-30 14:16:50.226156"], ["caption", "dia"], ["created_at", "2016-05-30 14:16:50.444467"], ["updated_at", "2016-05-30 14:16:50.444467"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 249ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:16:50 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:30:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "posts"
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 267ms (Views: 248.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 15:31:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 268ms (Views: 245.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-30 15:31:58 +0100
+
+
+Started POST "/posts" for ::1 at 2016-05-30 15:32:27 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MqeF3fVlOy3le8CAW++UGTHeNtzJW/otz54pA2F1bkxE7CUPv/IsN21IQY5TeCrkFuciF/6l+SowqaKWjsy41Q==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9d58869528 @tempfile=#<Tempfile:/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/RackMultipart20160530-7778-1fv34u5.jpg>, @original_filename="685de288ba0bf764f48860739e2d847e.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"685de288ba0bf764f48860739e2d847e.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"pomptree"}, "commit"=>"Create Post"}
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/bbeca6b8d29f4528e11061e70f3c1ad420160530-7778-1nqbpwb.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/bbeca6b8d29f4528e11061e70f3c1ad420160530-7778-18udyl.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/bbeca6b8d29f4528e11061e70f3c1ad420160530-7778-18udyl.jpg[0]'
+Command :: convert '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/bbeca6b8d29f4528e11061e70f3c1ad420160530-7778-18udyl.jpg[0]' -auto-orient -resize "640" '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/6670545b7d7689407eeea8b8e72710c420160530-7778-qkqj3r'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/px/21f7ns1j4bl7b3s37_kwsh3r0000gn/T/bbeca6b8d29f4528e11061e70f3c1ad420160530-7778-f3nn52.jpg'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("image_file_name", "image_content_type", "image_file_size", "image_updated_at", "caption", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["image_file_name", "685de288ba0bf764f48860739e2d847e.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 114630], ["image_updated_at", "2016-05-30 14:32:27.444131"], ["caption", "pomptree"], ["created_at", "2016-05-30 14:32:27.622337"], ["updated_at", "2016-05-30 14:32:27.622337"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 221ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/posts" for ::1 at 2016-05-30 15:32:27 +0100
+Processing by PostsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-05-30 15:32:44 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
