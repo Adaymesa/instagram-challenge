@@ -2,7 +2,6 @@ class AddAttachmentImageToPosts < ActiveRecord::Migration
   def self.up
     change_table :posts do |t|
       t.attachment :image
-      	t.string :caption
     end
   end
 

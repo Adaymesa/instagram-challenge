@@ -11,6 +11,7 @@ feature 'Posts' do
 
 	context 'Creating posts' do
     scenario 'Prompts user to fill out a form, then displays the new post' do
+      sign_up
       visit '/posts'
       click_link 'Post to instagram'
       attach_file('Image', "spec/files/images/aday.jpg")
@@ -20,6 +21,7 @@ feature 'Posts' do
       expect(page).to have_css("img[src*='aday.jpg']")
     end
     scenario 'Needs an image to create a post' do  
+      sign_up
       visit '/posts'
       click_link 'Post to instagram'
       fill_in 'Caption', with: "Diagram"
@@ -29,6 +31,7 @@ feature 'Posts' do
   end
     context 'Editing post' do
     scenario 'Let a user edit a post' do
+    sign_up
      visit '/posts'
      create_post
      click_link "Edit post"
@@ -41,6 +44,7 @@ feature 'Posts' do
 
     context 'Deleting posts' do
     scenario 'Removes a post when a user clicks a delete link' do
+      sign_up
       visit '/posts'
       create_post
       click_link "Delete post"
